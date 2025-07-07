@@ -1,0 +1,261 @@
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 16px;
+    margin: 0;
+    width: 350px;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  
+  /* Flex layout for buttons */
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Common button style */
+  button {
+    all: unset;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  /* Save All Tabs button */
+  #saveTabs {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /* Save Current Window button */
+  #saveCurrentWindow {
+    background-color: #2c8acc;
+    color: white;
+  }
+  
+ 
+  
+  /* Hover and click feedback */
+  button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+  
+  button:active {
+    filter: brightness(0.9);
+    transform: translateY(1px);
+  }
+  
+ 
+  
+  #searchBox::placeholder {
+    color: #aaa;
+  }
+  
+  /* Tab container */
+  #tabsContainer {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  /* Optional: scrollbar style for dark mode */
+  #tabsContainer::-webkit-scrollbar {
+    width: 8px;
+  }
+  #tabsContainer::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  
+  input#searchBox {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .window-group {
+    background: #2b2b2b;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  }
+  
+  .window-name {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 4px 8px;
+    margin-right: 10px;
+    background-color: #444;
+    border: 1px solid #666;
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .window-group button {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-left: 6px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .window-group button:hover {
+    background-color: #666;
+  }
+  
+
+  ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  .previouslysaved {
+    display: block;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+      background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Toggle switch style */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 16px;
+  }
+  
+  .theme-toggle input {
+    display: none;
+  }
+  
+  .theme-toggle .slider {
+    width: 36px;
+    height: 18px;
+    background-color: #666;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle .slider::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .theme-toggle input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  .theme-toggle input:checked + .slider::before {
+    transform: translateX(18px);
+  }
+  
+
+  body.light-theme {
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  body.light-theme h2,
+  body.light-theme h3,
+  body.light-theme h4,
+  body.light-theme h5,
+  body.light-theme h6 {
+    color: #000;
+  }
+  
+  body.light-theme #searchBox {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  body.light-theme #searchBox::placeholder {
+    color: #666;
+  }
+  
+  body.light-theme button {
+    background-color: #e0e0e0 !important;
+    color: #000 !important
+  }
+  
+  body.light-theme .theme-toggle {
+    color: #222;
+  }
+  
+  #importInput {
+    display: none;
+  }
+  
+  .import-label {
+    background-color: #f39c12;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+  }
+  
+  #importInput::-webkit-file-upload-button {
+    display: none;
+  }
+  
+  #importInput:hover + .import-label,
+  .import-label:hover {
+    filter: brightness(1.1);
+  }
+  
+  /* Light theme fix for new buttons */
+  body.light-theme .import-label {
+    background-color: #ffd966;
+    color: #000;
+  }
+  

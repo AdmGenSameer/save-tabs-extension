@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Save My Tabs",
+    "description": "Save open browser tabs for future access.",
+    "version": "1.0",
+    "permissions": ["tabs", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "1024": "icon.png"
+     
+      }
+    },
+    "icons": {
+      
+      "1024": "icon.png"
+    },
+    "incognito": "split"
+  }
+  

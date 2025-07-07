@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Save Tabs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <label class="theme-toggle">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider"></span>
+        🌓 Theme
+      </label>
+      
+  <h2>Saved Tabs</h2>
+  
+  <!-- Updated Button Group -->
+<div class="button-row">
+  <button id="saveTabs">💾 Save All Tabs</button>
+  <button id="saveCurrentWindow">🪟 Save Current Window</button>
+  <button id="smartGroupTabs">🧠 Smart Grouping</button>
+  <button class="previouslysaved">📂 Previously Saved</button>
+</div>
+
+<div class="button-row">
+  <button id="exportBtn">📤 Export</button>
+  <button id="exportHTML">Export as HTML</button>
+
+  <label for="importInput" class="import-label">📥 Import</label>
+  <input type="file" id="importInput" accept=".json">
+  <button id="loadSessionsBtn">🔁 Load Sessions</button>
+</div>
+  
+  <input type="text" id="searchBox" placeholder="🔍 Search tabs..." />
+  <div id="tabsContainer"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
